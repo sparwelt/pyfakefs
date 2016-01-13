@@ -19,7 +19,7 @@
 
 from fake_filesystem import __version__
 
-import os
+import os, codecs
 
 
 NAME = 'pyfakefs'
@@ -34,7 +34,7 @@ DESCRIPTION = 'pyfakefs implements a fake file system that mocks the Python file
 URL = "https://github.com/jmcgeheeiv/pyfakefs"
 
 readme = os.path.join(os.path.dirname(__file__), 'README.md')
-LONG_DESCRIPTION = open(readme).read()
+LONG_DESCRIPTION=codecs.open(readme, 'r', 'utf-8').read(),
 
 CLASSIFIERS = [
     'Development Status :: 5 - Production/Stable',
